@@ -13,6 +13,7 @@ module.exports = {
         "sk-blue-700": "#1E90FF",
         "sk-blue-800": "#87ceeb",
         "sk-dark-100": "#1B1B22",
+        "sk-gray-100": "#6a6a6a",
       },
       fontSize: {
         "32px": "2rem",
@@ -20,6 +21,9 @@ module.exports = {
         "78px": "4.5rem",
         "20px": "1.25rem",
         "25px": "1.563rem"
+      },
+      maxWidth: {
+        "205px": "12.8125rem",
       },
     },
   },
