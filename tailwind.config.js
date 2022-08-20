@@ -12,6 +12,7 @@ module.exports = {
         "sk-blue-600": "#73c2fb",
         "sk-blue-700": "#1E90FF",
         "sk-blue-800": "#87ceeb",
+        "sk-dark-100": "#1B1B22",
       },
     },
   },
