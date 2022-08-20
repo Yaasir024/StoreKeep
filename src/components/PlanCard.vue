@@ -5,7 +5,7 @@ const props = defineProps(["plan"]);
 </script>
 
 <template>
-  <div class="card relative text-center border-2 border-gray-100 pt-5 pb-40 px-10 text-sk-dark-100">
+  <div class="card relative text-center border-2 border-sk-gray-200 pt-5 pb-40 px-10 text-sk-dark-100">
     <p class="text-sk-dark-100 text-lg font-medium">{{ plan.title }}</p>
     <div class="text-sk-dark-100 text-25px mt-6">{{ plan.price }}</div>
     <div class="text-sk-gray-100 text-lg mt-2 mb-8 max-w-205px mx-auto">
@@ -34,6 +34,10 @@ const props = defineProps(["plan"]);
         </span>
       </li>
     </ul>
-    <div class="btn absolute bottom-7 inset-x-8 py-3 px-6 border-2 border-red-500 text-lg font-bold rounded-xl transition-all duration-300 ease-in-out hover:-translate-y-1">Get Started</div>
+
+    <RouterLink to="/plans" class="absolute bottom-7 inset-x-8">
+        <div class="btn  py-3 px-6 border-2 border-sk-blue-200 text-lg font-bold rounded-xl transition-all duration-300 ease-in-out hover:-translate-y-1">Get Started</div>
+    </RouterLink>
+    
   </div>
 </template>
