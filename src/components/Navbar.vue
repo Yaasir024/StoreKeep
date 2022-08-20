@@ -24,3 +24,42 @@ import Btn from "./Btn.vue";
         </div>
     </nav>
 </template>
+
+
+<style scoped>
+nav a {
+    font-size: 18px;
+    font-weight: 400;
+}
+nav a.router-link-exact-active {
+  position: relative;
+}
+
+nav a.inact.router-link-exact-active::before {
+  display: none;
+}
+nav a.router-link-exact-active::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  background: black;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  right: -4px;
+}
+
+.over {
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+</style>
+
