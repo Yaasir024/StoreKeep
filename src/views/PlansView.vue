@@ -45,7 +45,7 @@ const plansDetails = reactive({
 </script>
 
 <template>
-  <section class="plans text-center max-w-7xl mx-auto px-4">
+  <section class="plans text-center max-w-7xl mx-auto px-4 pb-210px">
     <h1 class="mt-8 text-32px text-sk-dark-100 font-medium tracking-0.01">
       PRICING
     </h1>

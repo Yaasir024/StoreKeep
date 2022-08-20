@@ -35,7 +35,7 @@ const props = defineProps(["plan"]);
       </li>
     </ul>
 
-    <RouterLink to="/plans" class="absolute bottom-7 inset-x-8">
+    <RouterLink to="/register" class="absolute bottom-7 inset-x-8">
         <div class="btn  py-3 px-6 border-2 border-sk-blue-200 text-lg font-bold rounded-xl transition-all duration-300 ease-in-out hover:-translate-y-1">Get Started</div>
     </RouterLink>
     
