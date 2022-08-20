@@ -8,17 +8,30 @@ import Btn from "./Btn.vue";
   >
     <div class="flex items-center justify-between">
       <div class="logo">STOREKEEP</div>
-      <div class="links flex">
+      <div class="links hidden md:flex">
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/plans" class="ml-8">Plans</RouterLink>
         <RouterLink to="/faqs" class="ml-8">FAQs</RouterLink>
         <RouterLink to="/about" class="ml-8">About</RouterLink>
       </div>
-      <div class="">
-        <RouterLink to="/login" class="mr-8">Log In</RouterLink>
+      <div class="flex items-center">
+        <RouterLink to="/login" class="mr-8 hidden md:block">Log In</RouterLink>
         <RouterLink to="/register">
           <Btn> Sign Up </Btn>
         </RouterLink>
+        <button class="ml-8 block md:hidden">
+          <svg
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            fill="none"
+          >
+            <path
+              fill="currentColor"
+              d="M2 3h20v3H2zM2 11h20v3H2zM2 19h20v3H2z"
+            ></path>
+          </svg>
+        </button>
       </div>
     </div>
   </nav>
