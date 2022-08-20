@@ -12,9 +12,7 @@ import Btn from "./Btn.vue";
                 <RouterLink to="/">Home</RouterLink>
                 <RouterLink to="/plans" class="ml-8">Plans</RouterLink>
                 <RouterLink to="/faqs" class="ml-8">FAQs</RouterLink>
-                <span class="ml-8">BLAH</span>
-                <span class="ml-8">PLANS</span>
-                <span class="ml-8">FAQs</span>
+                <RouterLink to="/about" class="ml-8">About</RouterLink>
             </div>
             <div class="">
                 <span class="mr-8">Log In</span>

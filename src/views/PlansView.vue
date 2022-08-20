@@ -1,13 +1,13 @@
 <script setup>
 import { ref, reactive } from "vue";
-import PlanCard from '../components/PlanCArd.vue'
+import PlanCard from '@/components/PlanCard.vue'
 
 const plansDetails = reactive({
   basic: {
     title: "BASIC",
     price: "$12/month",
     billingCondition: "Billed annually or $15 month-to-month",
-    planFeature: [
+    feature: [
       "1 Store",
       "1 Invoice Template",
       "2 Collaborators",
@@ -23,7 +23,7 @@ const plansDetails = reactive({
       PRICING
     </h1>
     <div class="card-grid max-w-5xl mx-auto mt-20 mb-10 grid grid-cols-3 gap-8">
-        <PlanCard />
+        <PlanCard :plan ="plansDetails.basic" />
       <div class="card text-center border-2 border-gray-100 pt-5 px-10">
         <p class="text-sk-dark-100 text-lg font-medium">BASIC</p>
         <div class="text-sk-dark-100 text-25px mt-6">$12/month</div>
