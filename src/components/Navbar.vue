@@ -11,6 +11,7 @@ import Btn from "./Btn.vue";
             <div class="links flex">
                 <RouterLink to="/">Home</RouterLink>
                 <RouterLink to="/plans" class="ml-8">Plans</RouterLink>
+                <RouterLink to="/faqs" class="ml-8">FAQs</RouterLink>
                 <span class="ml-8">BLAH</span>
                 <span class="ml-8">PLANS</span>
                 <span class="ml-8">FAQs</span>

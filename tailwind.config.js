@@ -14,6 +14,13 @@ module.exports = {
         "sk-blue-800": "#87ceeb",
         "sk-dark-100": "#1B1B22",
       },
+      fontSize: {
+        "32px": "2rem",
+        "40px": "2.5rem",
+        "78px": "4.5rem",
+        "20px": "1.25rem",
+        "25px": "1.563rem"
+      },
     },
   },
   plugins: [],
