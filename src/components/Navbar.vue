@@ -17,7 +17,7 @@ const closeNavOnRoute = () => {
     class="p-4 lg:px-140px lg:py-15px md:px-35px transition-all ease-in-out duration-700 border-b-2 md:border-none"
   >
     <div class="flex items-center justify-between">
-      <div class="logo">STOREKEEP</div>
+      <div class="logo text-sk-blue-400 text-lg font-medium cursor-pointer">STOREKEEP</div>
       <div class="links hidden md:flex">
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/plans" class="ml-8">Plans</RouterLink>
@@ -60,7 +60,7 @@ const closeNavOnRoute = () => {
           </svg>
         </button>
         <div class="flex flex-col">
-          <div class="logo mb-7">STOREKEEP</div>
+          <div class="logo mb-7 text-sk-blue-400 text-lg font-medium cursor-pointer">STOREKEEP</div>
           <RouterLink to="/" class="mb-7" @click="closeNavOnRoute"
             >Home</RouterLink
           >
