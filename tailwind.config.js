@@ -15,6 +15,11 @@ module.exports = {
         "sk-dark-100": "#1B1B22",
         "sk-gray-100": "#6a6a6a",
         "sk-gray-200": "#e5e5e5",
+        "sk-gray-500": "#9e9e9e",
+        "sk-gray-600": "#757575",
+        "sk-gray-700": "#616161",
+        "sk-gray-800": "#424242",
+        "sk-gray-900": "#212121",
       },
       fontSize: {
         "32px": "2rem",
