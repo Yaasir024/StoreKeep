@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
@@ -13,6 +14,7 @@ module.exports = {
         "sk-blue-700": "#1E90FF",
         "sk-blue-800": "#87ceeb",
         "sk-dark-100": "#1B1B22",
+        "sk-dark-200": "#121212",
         "sk-gray-100": "#6a6a6a",
         "sk-gray-200": "#e5e5e5",
         "sk-gray-500": "#9e9e9e",
@@ -26,7 +28,7 @@ module.exports = {
         "40px": "2.5rem",
         "78px": "4.5rem",
         "20px": "1.25rem",
-        "25px": "1.563rem"
+        "25px": "1.563rem",
       },
       maxWidth: {
         "500px": "31.25rem",
