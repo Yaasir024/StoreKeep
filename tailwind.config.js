@@ -25,6 +25,7 @@ module.exports = {
         "sk-gray-900": "#212121",
         "sk-text-dark": "#1B1B22",
         "sk-text-light": "#FFFFFF",
+        "sk-divider-dark": "#121212",
       },
       fontSize: {
         "32px": "2rem",

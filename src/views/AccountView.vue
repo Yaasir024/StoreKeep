@@ -3,6 +3,7 @@
     <section
       class="bg-white text-sk-text-dark text-lg min-h-screen dark:bg-sk-bg-dark dark:text-sk-text-light"
     >
+      <!-- Header -->
       <div class="header h-12 flex items-center justify-between">
         <div class="left ml-5 flex items-center">
           <div
@@ -56,6 +57,54 @@
           </div>
         </div>
       </div>
+      <main class="max-w-[1180px] mx-auto px-4">
+        <!-- Hero -->
+        <div
+          class="py-12 flex items-center justify-between border-b dark:border-sk-divider-dark"
+        >
+          <div class="">
+            <h1 class="text-4xl leading-10 font-medium mb-1">My Stores</h1>
+            <p>Choose a store to view, edit and open it's dashboard.</p>
+          </div>
+          <div class="mr-5">
+            <button
+              class="flex items-center py-2 px-5 text-white bg-sk-blue-700 rounded-2xl transition-all duration-300 ease-in-out hover:-translate-y-1"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="24"
+                height="24"
+                class="mr-1"
+              >
+                <path
+                  d="M12 12L12 6 11 6 11 12 5 12 5 13 11 13 11 19 12 19 12 13 18 13 18 12z"
+                ></path>
+              </svg>
+              <span>Create New Store</span>
+            </button>
+          </div>
+        </div>
+        <div class="">
+          <div class="py-7">
+            <span>All Stores</span>
+            <div class="">
+              <button class="bg-[#979797] flex items-center justify-center h-9 px-2 rounded-md">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="24px"
+                  height="24px"
+                >
+                  <path
+                    d="M13,11 L18,11 L18,6 L13,6 L13,11 Z M19,6 L19,12 L12,12 L12,5 L18,5 C18.5522847,5 19,5.44771525 19,6 Z M13,19 L18,19 L18,14 L13,14 L13,19 Z M19,13 L19,19 C19,19.5522847 18.5522847,20 18,20 L12,20 L12,13 L19,13 Z M5,11 L10,11 L10,6 L5,6 L5,11 Z M11,5 L11,12 L4,12 L4,6 C4,5.44771525 4.44771525,5 5,5 L11,5 Z M5,19 L10,19 L10,14 L5,14 L5,19 Z M11,13 L11,20 L5,20 C4.44771525,20 4,19.5522847 4,19 L4,13 L11,13 Z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
     </section>
   </div>
 </template>
