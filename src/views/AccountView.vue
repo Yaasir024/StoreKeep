@@ -1,6 +1,8 @@
 <template>
   <div class="dark">
-    <section class="bg-white text-lg dark:bg-red-400">
+    <section
+      class="bg-white text-sk-text-dark text-lg min-h-screen dark:bg-sk-bg-dark dark:text-sk-text-light"
+    >
       <div class="header h-12 flex items-center justify-between">
         <div class="left ml-5 flex items-center">
           <div

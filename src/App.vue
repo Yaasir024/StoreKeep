@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar.vue";
 
 <template>
 
-  <section>
+  <section class="hidden">
     <Navbar/>
   </section>
 

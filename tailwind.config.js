@@ -13,6 +13,7 @@ module.exports = {
         "sk-blue-600": "#73c2fb",
         "sk-blue-700": "#1E90FF",
         "sk-blue-800": "#87ceeb",
+        "sk-bg-dark": "#292929",
         "sk-dark-100": "#1B1B22",
         "sk-dark-200": "#121212",
         "sk-gray-100": "#6a6a6a",
@@ -22,6 +23,8 @@ module.exports = {
         "sk-gray-700": "#616161",
         "sk-gray-800": "#424242",
         "sk-gray-900": "#212121",
+        "sk-text-dark": "#1B1B22",
+        "sk-text-light": "#FFFFFF",
       },
       fontSize: {
         "32px": "2rem",
