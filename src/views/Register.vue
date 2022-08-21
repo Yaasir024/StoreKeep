@@ -6,6 +6,11 @@
           Create Account
         </h1>
         <input
+          type="text"
+          placeholder="Name"
+          class="h-12 px-2 mb-4 border-2 border-sk-dark-100 rounded-md text-lg outline-sk-blue-400"
+        />
+        <input
           type="email"
           placeholder="Email"
           class="h-12 px-2 mb-4 border-2 border-sk-dark-100 rounded-md text-lg outline-sk-blue-400"
