@@ -1,5 +1,12 @@
+<script setup>
+import { ref, reactive, computed } from "vue";
+import { useSystemStore } from "@/stores/system";
+
+const system = useSystemStore();
+</script>
+
 <template>
-  <div class="dar">
+  <div :class="{'dark' : system.darkMode}">
     <section
       class="bg-white text-sk-text-dark text-lg min-h-screen dark:bg-ps-gray-700 dark:text-sk-white"
     >
@@ -122,9 +129,15 @@
             </div>
           </div>
           <div class="">
-            <div class="h-[270px] w-[310px] bg-sk-white dark:bg-ps-gray-800 shadow-xl flex flex-col rounded overflow-hidden cursor-pointer transition-all duration-300 ease-in-out hover:-translate-y-1">
+            <div
+              class="h-[270px] w-[310px] bg-sk-white dark:bg-ps-gray-800 shadow-xl flex flex-col rounded overflow-hidden cursor-pointer transition-all duration-300 ease-in-out hover:-translate-y-1"
+            >
               <div class="img-wrapper h-48">
-                <img src="/assets/images/store1.jpg" alt="" class="h-full w-full">
+                <img
+                  src="/assets/images/store1.jpg"
+                  alt=""
+                  class="h-full w-full"
+                />
               </div>
               <div class="flex flex-col grow justify-center items-start px-6">
                 <div class="">
