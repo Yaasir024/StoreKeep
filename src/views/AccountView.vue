@@ -37,8 +37,9 @@ const system = useSystemStore();
                 ></path>
               </svg>
             </div>
-            <div class="absolute left-0 z-50">
-              <div class="w-[450px] bg-sk-white dark:bg-ps-gray-800 shadow-2xl">
+            <div class="absolute top-[110%] left-0 z-50">
+              <div class="relative w-[450px] bg-sk-white dark:bg-ps-gray-800 shadow-2xl rounded-xl">
+                
                 <div class="flex flex-col">
                   <div class="flex items-center justify-between px-6 py-4 mb-2">
                     <div class="">Recent Stores</div>
@@ -240,5 +241,13 @@ const system = useSystemStore();
 <style scoped>
 .bx-shadow {
   box-shadow: 0 1px 5px 0 rgba(41, 85, 115, 0.21);
+}
+.arrow-up {
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  
+  border-bottom: 5px solid red;
 }
 </style>
