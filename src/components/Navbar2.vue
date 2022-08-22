@@ -1,6 +1,13 @@
+<script setup>
+import { ref, reactive, computed } from "vue";
+import { useSystemStore } from "@/stores/system";
+
+const system = useSystemStore();
+</script>
+
 <template>
   <!-- Header -->
-  <div
+  <nav
     class="bx-shadow h-12 flex items-center justify-between dark:bg-ps-gray-800"
   >
     <div class="left ml-5 flex items-center">
@@ -21,7 +28,7 @@
             ></path>
           </svg>
         </div>
-        <div class="absolute top-[110%] left-0 z-50">
+        <div class="hidden absolute top-[110%] left-0 z-50">
           <div
             class="relative w-[450px] bg-sk-white dark:bg-ps-gray-800 shadow-2xl rounded-xl"
           >
@@ -75,13 +82,32 @@
           </div>
         </div>
       </div>
-      <div class="flex items-center p-3 pr-2 cursor-pointer">
-        <span>Help</span>
-        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-          <path
-            d="M8.14644661,10.1464466 C8.34170876,9.95118446 8.65829124,9.95118446 8.85355339,10.1464466 L12.4989857,13.7981758 L16.1502401,10.1464466 C16.3455022,9.95118446 16.6620847,9.95118446 16.8573469,10.1464466 C17.052609,10.3417088 17.052609,10.6582912 16.8573469,10.8535534 L12.4989857,15.2123894 L8.14644661,10.8535534 C7.95118446,10.6582912 7.95118446,10.3417088 8.14644661,10.1464466 Z"
-          ></path>
-        </svg>
+      <div class="relative">
+        <div class="flex items-center p-3 pr-2 cursor-pointer">
+          <span>Help</span>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+            <path
+              d="M8.14644661,10.1464466 C8.34170876,9.95118446 8.65829124,9.95118446 8.85355339,10.1464466 L12.4989857,13.7981758 L16.1502401,10.1464466 C16.3455022,9.95118446 16.6620847,9.95118446 16.8573469,10.1464466 C17.052609,10.3417088 17.052609,10.6582912 16.8573469,10.8535534 L12.4989857,15.2123894 L8.14644661,10.8535534 C7.95118446,10.6582912 7.95118446,10.3417088 8.14644661,10.1464466 Z"
+            ></path>
+          </svg>
+        </div>
+        <div class="absolute top-[110%] left-[-150px] z-50">
+          <div
+            class="relative w-[450px] bg-sk-white dark:bg-ps-gray-800 shadow-2xl rounded-xl"
+          >
+            <div class="h-[450px] w-full">
+              <div
+                class="flex items-center justify-between px-7 py-6 mb-2 border-b dark:border-ps-gray-500"
+              >
+                <div class="">Help</div>
+                <div class="flex items-center text-sk-blue-700 cursor-pointer">
+                  <span>Visit Help Guide</span>
+                </div>
+              </div>
+              <div class=""></div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="p-3">
         <span>Upgrade</span>
@@ -103,14 +129,76 @@
         </svg>
       </div>
       <span class="h-5 w-[1px] mx-3 bg-sk-gray-100"></span>
-      <div class="flex items-center cursor-pointer p-4">
-        <span>Yaasir Falana</span>
-        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-          <path
-            d="M8.14644661,10.1464466 C8.34170876,9.95118446 8.65829124,9.95118446 8.85355339,10.1464466 L12.4989857,13.7981758 L16.1502401,10.1464466 C16.3455022,9.95118446 16.6620847,9.95118446 16.8573469,10.1464466 C17.052609,10.3417088 17.052609,10.6582912 16.8573469,10.8535534 L12.4989857,15.2123894 L8.14644661,10.8535534 C7.95118446,10.6582912 7.95118446,10.3417088 8.14644661,10.1464466 Z"
-          ></path>
-        </svg>
+      <div class="relative">
+        <div class="flex items-center cursor-pointer p-4">
+          <span>Yaasir Falana</span>
+          <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+            <path
+              d="M8.14644661,10.1464466 C8.34170876,9.95118446 8.65829124,9.95118446 8.85355339,10.1464466 L12.4989857,13.7981758 L16.1502401,10.1464466 C16.3455022,9.95118446 16.6620847,9.95118446 16.8573469,10.1464466 C17.052609,10.3417088 17.052609,10.6582912 16.8573469,10.8535534 L12.4989857,15.2123894 L8.14644661,10.8535534 C7.95118446,10.6582912 7.95118446,10.3417088 8.14644661,10.1464466 Z"
+            ></path>
+          </svg>
+        </div>
+        <div class="absolute top-[110%] right-0 z-50">
+          <div
+            class="relative w-[300px] bg-sk-white dark:bg-ps-gray-800 shadow-2xl rounded-xl"
+          >
+            <div class="h-[450px] w-full">
+              <div
+                class="flex items-center px-7 py-4 mb-2 border-b dark:border-ps-gray-500"
+              >
+                <div
+                  class="bg-red-500 flex items-center justify-center h-12 w-12 rounded-[50%] text-2xl font-bold mr-2"
+                >
+                  Y
+                </div>
+                <div class="">Yaasir Falana</div>
+              </div>
+              <ul class="px-6 flex flex-col text-base">
+                <li
+                  class="py-3 cursor-pointer transition-all duration-300 ease-in-out hover:text-sk-blue-800"
+                >
+                  Account Setting
+                </li>
+                <li
+                  class="py-2 cursor-pointer transition-all duration-300 ease-in-out hover:text-sk-blue-800 border-t dark:border-ps-gray-500"
+                >
+                  Subscriptions
+                </li>
+                <li
+                  class="py-2 cursor-pointer transition-all duration-300 ease-in-out hover:text-sk-blue-800"
+                >
+                  Billing History
+                </li>
+                <li
+                  class="py-2 cursor-pointer transition-all duration-300 ease-in-out hover:text-sk-blue-800 border-b dark:border-ps-gray-500"
+                >
+                  Payment Method
+                </li>
+                <li
+                  class="py-2 cursor-pointer transition-all duration-300 ease-in-out hover:text-sk-blue-800"
+                >
+                  Create New Store
+                </li>
+                <li
+                  class="py-2 cursor-pointer transition-all duration-300 ease-in-out hover:text-sk-blue-800"
+                >
+                  Help Center
+                </li>
+                <li
+                  class="py-2 cursor-pointer transition-all duration-300 ease-in-out hover:text-sk-blue-800"
+                >
+                  Themes
+                </li>
+                <li
+                  class="py-2 cursor-pointer transition-all duration-300 ease-in-out hover:text-sk-blue-800 border-t dark:border-ps-gray-500"
+                >
+                  Logout
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </nav>
 </template>
