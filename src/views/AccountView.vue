@@ -15,18 +15,76 @@ const system = useSystemStore();
         class="bx-shadow h-12 flex items-center justify-between dark:bg-ps-gray-800"
       >
         <div class="left ml-5 flex items-center">
-          <div
-            class="logo mr-2 text-sk-blue-400 text-lg font-medium cursor-pointer"
-          >
-            STOREKEEP
-          </div>
-          <div class="flex items-center p-3 pr-2 cursor-pointer">
-            <span>My Stores</span>
-            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-              <path
-                d="M8.14644661,10.1464466 C8.34170876,9.95118446 8.65829124,9.95118446 8.85355339,10.1464466 L12.4989857,13.7981758 L16.1502401,10.1464466 C16.3455022,9.95118446 16.6620847,9.95118446 16.8573469,10.1464466 C17.052609,10.3417088 17.052609,10.6582912 16.8573469,10.8535534 L12.4989857,15.2123894 L8.14644661,10.8535534 C7.95118446,10.6582912 7.95118446,10.3417088 8.14644661,10.1464466 Z"
-              ></path>
-            </svg>
+          <RouterLink to="/">
+            <div
+              class="logo mr-2 text-sk-blue-600 text-lg font-medium cursor-pointer"
+            >
+              STOREKEEP
+            </div>
+          </RouterLink>
+
+          <div class="">
+            <div class="relative flex items-center p-3 pr-2 cursor-pointer">
+              <span>My Stores</span>
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="24"
+                height="24"
+              >
+                <path
+                  d="M8.14644661,10.1464466 C8.34170876,9.95118446 8.65829124,9.95118446 8.85355339,10.1464466 L12.4989857,13.7981758 L16.1502401,10.1464466 C16.3455022,9.95118446 16.6620847,9.95118446 16.8573469,10.1464466 C17.052609,10.3417088 17.052609,10.6582912 16.8573469,10.8535534 L12.4989857,15.2123894 L8.14644661,10.8535534 C7.95118446,10.6582912 7.95118446,10.3417088 8.14644661,10.1464466 Z"
+                ></path>
+              </svg>
+            </div>
+            <div class="absolute left-0 z-50">
+              <div class="w-[450px] bg-sk-white dark:bg-ps-gray-800 shadow-2xl">
+                <div class="flex flex-col">
+                  <div class="flex items-center justify-between px-6 py-4 mb-2">
+                    <div class="">Recent Stores</div>
+                    <div
+                      class="flex items-center text-sk-blue-700 cursor-pointer"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        width="24"
+                        height="24"
+                        class="mr-1"
+                      >
+                        <path
+                          d="M12 12L12 6 11 6 11 12 5 12 5 13 11 13 11 19 12 19 12 13 18 13 18 12z"
+                        ></path>
+                      </svg>
+                      <span>Create New Store</span>
+                    </div>
+                  </div>
+                  <div class="h-16 border-b dark:border-ps-gray-500 px-6 flex items-center justify-between ">
+                    <div class="flex items-center">
+                      <img
+                        src="/assets/images/store1.jpg"
+                        alt=""
+                        class="h-9 w-16 mr-2"
+                      />
+                      <p class="">Store Falana</p>
+                    </div>
+                    <div class="flex items-center cursor-pointer">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 576 512" width="24" height="24" fill="currentColor"
+                      >
+                        <path
+                          d="M160 256C160 185.3 217.3 128 288 128C358.7 128 416 185.3 416 256C416 326.7 358.7 384 288 384C217.3 384 160 326.7 160 256zM288 336C332.2 336 368 300.2 368 256C368 211.8 332.2 176 288 176C287.3 176 286.7 176 285.1 176C287.3 181.1 288 186.5 288 192C288 227.3 259.3 256 224 256C218.5 256 213.1 255.3 208 253.1C208 254.7 208 255.3 208 255.1C208 300.2 243.8 336 288 336L288 336zM95.42 112.6C142.5 68.84 207.2 32 288 32C368.8 32 433.5 68.84 480.6 112.6C527.4 156 558.7 207.1 573.5 243.7C576.8 251.6 576.8 260.4 573.5 268.3C558.7 304 527.4 355.1 480.6 399.4C433.5 443.2 368.8 480 288 480C207.2 480 142.5 443.2 95.42 399.4C48.62 355.1 17.34 304 2.461 268.3C-.8205 260.4-.8205 251.6 2.461 243.7C17.34 207.1 48.62 156 95.42 112.6V112.6zM288 80C222.8 80 169.2 109.6 128.1 147.7C89.6 183.5 63.02 225.1 49.44 256C63.02 286 89.6 328.5 128.1 364.3C169.2 402.4 222.8 432 288 432C353.2 432 406.8 402.4 447.9 364.3C486.4 328.5 512.1 286 526.6 256C512.1 225.1 486.4 183.5 447.9 147.7C406.8 109.6 353.2 80 288 80V80z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="h-16 flex items-center justify-center">
+                    <p class="text-sk-blue-700 cursor-pointer">Go to all Stores</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="flex items-center p-3 pr-2 cursor-pointer">
             <span>Help</span>
@@ -149,7 +207,9 @@ const system = useSystemStore();
             <div
               class="h-[270px] w-[310px] px-2 bg-sk-white dark:bg-ps-gray-800 shadow-2xl text-center rounded overflow-hidden cursor-pointer transition-all duration-300 ease-in-out hover:-translate-y-1 flex flex-col items-center justify-center"
             >
-              <div class="flex items-center justify-center mb-4 text-sk-blue-700">
+              <div
+                class="flex items-center justify-center mb-4 text-sk-blue-700"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 576 512"
