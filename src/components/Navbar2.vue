@@ -1,6 +1,7 @@
 <script setup>
 import { ref, reactive, computed } from "vue";
 import { useSystemStore } from "@/stores/system";
+import { useClickOutside } from "@/composables/useClickOutside";
 
 const system = useSystemStore();
 
@@ -8,6 +9,11 @@ const accountNav = ref(false)
 const toggleAccountNav = () => {
     accountNav.value = !accountNav.value
 }
+
+const accountsMenu = ref(null)
+useClickOutside(accountsMenu, () => {
+  accountNav.value = false;
+});
 </script>
 
 <template>
@@ -134,8 +140,8 @@ const toggleAccountNav = () => {
         </svg>
       </div>
       <span class="h-5 w-[1px] mx-3 bg-sk-gray-100"></span>
-      <div class="relative">
-        <div class="flex items-center cursor-pointer p-4 transition-all duration-300 ease-in-out hover:text-sk-blue-800" @click="toggleAccountNav">
+      <div class="relative"  ref="accountsMenu">
+        <div class="flex items-center cursor-pointer p-4 transition-all duration-300 ease-in-out hover:text-sk-blue-800" @click="toggleAccountNav" >
           <span>Yaasir Falana</span>
           <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
             <path
