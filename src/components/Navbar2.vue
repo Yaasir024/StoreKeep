@@ -3,6 +3,11 @@ import { ref, reactive, computed } from "vue";
 import { useSystemStore } from "@/stores/system";
 
 const system = useSystemStore();
+
+const accountNav = ref(false)
+const toggleAccountNav = () => {
+    accountNav.value = !accountNav.value
+}
 </script>
 
 <template>
@@ -130,7 +135,7 @@ const system = useSystemStore();
       </div>
       <span class="h-5 w-[1px] mx-3 bg-sk-gray-100"></span>
       <div class="relative">
-        <div class="flex items-center cursor-pointer p-4">
+        <div class="flex items-center cursor-pointer p-4 transition-all duration-300 ease-in-out hover:text-sk-blue-800" @click="toggleAccountNav">
           <span>Yaasir Falana</span>
           <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
             <path
@@ -138,16 +143,16 @@ const system = useSystemStore();
             ></path>
           </svg>
         </div>
-        <div class="absolute top-[110%] right-0 z-50">
+        <div class="absolute top-[110%] right-0 z-50" v-if="accountNav">
           <div
             class="relative w-[300px] bg-sk-white dark:bg-ps-gray-800 shadow-2xl rounded-xl"
           >
-            <div class="h-[450px] w-full">
+            <div class="w-full pb-5">
               <div
                 class="flex items-center px-7 py-4 mb-2 border-b dark:border-ps-gray-500"
               >
                 <div
-                  class="bg-red-500 flex items-center justify-center h-12 w-12 rounded-[50%] text-2xl font-bold mr-2"
+                  class="bg-red-500 flex items-center justify-center h-12 w-12 rounded-[50%] text-sk-white text-2xl font-bold mr-2"
                 >
                   Y
                 </div>
