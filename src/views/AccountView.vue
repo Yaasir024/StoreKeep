@@ -1,11 +1,11 @@
 <template>
-  <div class="dark">
+  <div class="dar">
     <section
-      class="bg-white text-sk-text-dark text-lg min-h-screen dark:bg-ps-gray-700 dark:text-sk-text-light"
+      class="bg-white text-sk-text-dark text-lg min-h-screen dark:bg-ps-gray-700 dark:text-sk-white"
     >
       <!-- Header -->
       <div
-        class="header h-12 flex items-center justify-between dark:bg-ps-gray-800"
+        class="bx-shadow h-12 flex items-center justify-between dark:bg-ps-gray-800"
       >
         <div class="left ml-5 flex items-center">
           <div
@@ -92,7 +92,7 @@
             <span>All Stores</span>
             <div class="flex items-center">
               <button
-                class="bg-ps-gray-400 mr-2 flex items-center justify-center h-9 px-2 rounded-md transition-all duration-300 ease-in-out hover:scale-110"
+                class="bx-shadow bg-sk-white dark:bg-ps-gray-400 mr-2 flex items-center justify-center h-9 px-2 rounded-md transition-all duration-300 ease-in-out hover:scale-110"
               >
                 <svg
                   viewBox="0 0 24 24"
@@ -106,7 +106,7 @@
                 </svg>
               </button>
               <button
-                class="bg-ps-gray-400 flex items-center justify-center h-9 px-2 rounded-md transition-all duration-300 ease-in-out hover:scale-110"
+                class="bx-shadow bg-sk-white dark:bg-ps-gray-400 flex items-center justify-center h-9 px-2 rounded-md transition-all duration-300 ease-in-out hover:scale-110"
               >
                 <svg
                   viewBox="0 0 24 24"
@@ -122,7 +122,7 @@
             </div>
           </div>
           <div class="">
-            <div class="h-[270px] w-[300px] bg-red-400 flex flex-col rounded overflow-hidden cursor-pointer">
+            <div class="h-[270px] w-[310px] bg-sk-white dark:bg-ps-gray-800 shadow-xl flex flex-col rounded overflow-hidden cursor-pointer transition-all duration-300 ease-in-out hover:-translate-y-1">
               <div class="img-wrapper h-48">
                 <img src="/assets/images/store1.jpg" alt="" class="h-full w-full">
               </div>
@@ -141,7 +141,7 @@
 </template>
 
 <style scoped>
-.header {
+.bx-shadow {
   box-shadow: 0 1px 5px 0 rgba(41, 85, 115, 0.21);
 }
 </style>
