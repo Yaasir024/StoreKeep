@@ -26,6 +26,16 @@ module.exports = {
         "sk-text-dark": "#1B1B22",
         "sk-text-light": "#FFFFFF",
         "sk-divider-dark": "#121212",
+
+        //Gray Shades
+        "ps-gray-100": "#DFE3FA",
+        "ps-gray-200": "#888EB0",
+        "ps-gray-300": "#7E88C3",
+        "ps-gray-400": "#252945", //Buttons
+        "ps-gray-500": "#1E2139",
+        "ps-gray-600": "#141625",
+        "ps-gray-700": "#0C0E16", //BG
+        "ps-gray-800": "#141625",
       },
       fontSize: {
         "32px": "2rem",

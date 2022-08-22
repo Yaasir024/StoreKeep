@@ -1,10 +1,12 @@
 <template>
   <div class="dark">
     <section
-      class="bg-white text-sk-text-dark text-lg min-h-screen dark:bg-sk-bg-dark dark:text-sk-text-light"
+      class="bg-white text-sk-text-dark text-lg min-h-screen dark:bg-ps-gray-700 dark:text-sk-text-light"
     >
       <!-- Header -->
-      <div class="header h-12 flex items-center justify-between">
+      <div
+        class="header h-12 flex items-center justify-between dark:bg-ps-gray-800"
+      >
         <div class="left ml-5 flex items-center">
           <div
             class="logo mr-2 text-sk-blue-400 text-lg font-medium cursor-pointer"
@@ -60,7 +62,7 @@
       <main class="max-w-[1180px] mx-auto px-4">
         <!-- Hero -->
         <div
-          class="py-12 flex items-center justify-between border-b dark:border-sk-divider-dark"
+          class="py-12 flex items-center justify-between border-b dark:border-ps-gray-500"
         >
           <div class="">
             <h1 class="text-4xl leading-10 font-medium mb-1">My Stores</h1>
@@ -86,10 +88,26 @@
           </div>
         </div>
         <div class="">
-          <div class="py-7">
+          <div class="py-8 flex items-center justify-between">
             <span>All Stores</span>
-            <div class="">
-              <button class="bg-[#979797] flex items-center justify-center h-9 px-2 rounded-md">
+            <div class="flex items-center">
+              <button
+                class="bg-ps-gray-400 mr-2 flex items-center justify-center h-9 px-2 rounded-md transition-all duration-300 ease-in-out hover:scale-110"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="24px"
+                  height="24px"
+                >
+                  <path
+                    d="M5,6 L5,7 L18,7 L18,6 L5,6 Z M19,6 L19,8 L4,8 L4,6 C4,5.44771525 4.44771525,5 5,5 L18,5 C18.5522847,5 19,5.44771525 19,6 Z M5,10 L5,11 L18,11 L18,10 L5,10 Z M19,9 L19,12 L4,12 L4,9 L19,9 Z M5,14 L5,15 L18,15 L18,14 L5,14 Z M19,13 L19,16 L4,16 L4,13 L19,13 Z M5,18 L5,19 L18,19 L18,18 L5,18 Z M19,17 L19,19 C19,19.5522847 18.5522847,20 18,20 L5,20 C4.44771525,20 4,19.5522847 4,19 L4,17 L19,17 Z"
+                  ></path>
+                </svg>
+              </button>
+              <button
+                class="bg-ps-gray-400 flex items-center justify-center h-9 px-2 rounded-md transition-all duration-300 ease-in-out hover:scale-110"
+              >
                 <svg
                   viewBox="0 0 24 24"
                   fill="currentColor"
@@ -101,6 +119,19 @@
                   ></path>
                 </svg>
               </button>
+            </div>
+          </div>
+          <div class="">
+            <div class="h-[270px] w-[300px] bg-red-400 flex flex-col rounded overflow-hidden cursor-pointer">
+              <div class="img-wrapper h-48">
+                <img src="/assets/images/store1.jpg" alt="" class="h-full w-full">
+              </div>
+              <div class="flex flex-col grow justify-center items-start px-6">
+                <div class="">
+                  <p class="text-xl font-medium">Store Falana</p>
+                  <p>Jan 27, 2022</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
