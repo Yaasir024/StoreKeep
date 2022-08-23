@@ -2,7 +2,7 @@
 import Navbar from "@/components/Navbar.vue";
 import { ref, reactive, computed } from "vue";
 import { useSystemStore } from "@/stores/system";
-import Navbar2 from "../components/Navbar2.vue";
+import Navbar2 from "../../components/Navbar2.vue";
 
 const system = useSystemStore();
 </script>
