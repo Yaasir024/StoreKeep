@@ -26,6 +26,19 @@ useClickOutside(storesMenu, () => {
   storeNav.value = false;
 });
 
+
+// Toggle Nav
+const helpNav = ref(false);
+const toggleHelpNav = () => {
+  helpNav.value = !helpNav.value;
+};
+
+const helpMenu = ref(null);
+useClickOutside(helpMenu, () => {
+  helpNav.value = false;
+});
+
+
 </script>
 
 <template>
@@ -116,8 +129,8 @@ useClickOutside(storesMenu, () => {
           </div>
         </transition>
       </div>
-      <div class="relative">
-        <div class="flex items-center p-3 pr-2 cursor-pointer">
+      <div class="relative" ref="helpMenu">
+        <div class="flex items-center p-3 pr-2 cursor-pointer" @click="toggleHelpNav">
           <span>Help</span>
           <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
             <path
@@ -126,7 +139,7 @@ useClickOutside(storesMenu, () => {
           </svg>
         </div>
         <transition name="navPopup">
-          <div class="absolute top-[110%] left-[-150px] z-50">
+          <div v-if="helpNav" class="absolute top-[110%] left-[-150px] z-50">
             <div
               class="relative w-[450px] bg-sk-white dark:bg-ps-gray-800 shadow-2xl rounded-xl"
             >
@@ -148,24 +161,42 @@ useClickOutside(storesMenu, () => {
                       placeholder="Search"
                       class="w-full px-3 py-1 mr-3 rounded-2xl outline-none bg-transparent border border-sk-blue-700"
                     />
-                    <div class="flex items-center justify-center text-sk-blue-700">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="22" height="22" fill="currentColor"><path d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"/></svg>
+                    <div
+                      class="flex items-center justify-center text-sk-blue-700"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                        width="22"
+                        height="22"
+                        fill="currentColor"
+                      >
+                        <path
+                          d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"
+                        />
+                      </svg>
                     </div>
                   </div>
-                  <p class="mt-3">Help Topics</p>
-                  <div class="">
-                    <ul>
-                      <li>
-                        <RouterLink to="/">Return of Kazama Jun</RouterLink>
-                      </li>
-                      <li>
-                        <RouterLink to="/">How to implement local storage</RouterLink>
-                      </li>
-                      <li>
-                        <RouterLink to="/">How to implement dynamic themes</RouterLink>
-                      </li>
-                      <li>
-                        <RouterLink to="/">How to run ahead of schedule</RouterLink>
+                  <p class="mt-3 mb-2">Help Topics</p>
+                  <div class="overflow-x-hidden overflow-y-auto max-h-[245px]">
+                    <ul class="text-base ">
+                      <li v-for="i in (10)" :key="i">
+                        <RouterLink to="/">
+                          <div class="py-2 flex items-center justify-between transition-all duration-300 ease-in-out hover:text-sk-blue-800">
+                            <p class="">Return of Kazama Jun {{i}}</p>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 256 512"
+                              width="16"
+                              height="16"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
+                              />
+                            </svg>
+                          </div>
+                        </RouterLink>
                       </li>
                     </ul>
                   </div>
@@ -273,3 +304,17 @@ useClickOutside(storesMenu, () => {
     </div>
   </nav>
 </template>
+
+
+<style scoped>
+/* Modal Animation */
+.navPopup-enter-active,
+.navPopup-leave-active {
+  transition: 0.3s ease all;
+}
+.navPopup-enter-from,
+.navPopup-leave-to {
+  transform: scale(0);
+  transform-origin: top;
+}
+</style>
