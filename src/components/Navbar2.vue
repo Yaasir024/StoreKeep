@@ -53,7 +53,7 @@ useClickOutside(notificationMenu, () => {
 <template>
   <!-- Header -->
   <nav
-    class="bx-shadow h-12 flex items-center justify-between dark:bg-ps-gray-800"
+    class="shadow-xl h-12 flex items-center justify-between dark:bg-ps-gray-800 text-sk-text-dark text-lg dark:text-sk-white"
   >
     <div class="left ml-5 flex items-center">
       <RouterLink to="/">
@@ -286,11 +286,14 @@ useClickOutside(notificationMenu, () => {
                   <div class="">Yaasir Falana</div>
                 </div>
                 <ul class="px-6 flex flex-col text-base">
-                  <li
+                  <RouterLink to="/account/account-settings">
+                    <li
                     class="py-3 cursor-pointer transition-all duration-300 ease-in-out hover:text-sk-blue-800"
                   >
                     Account Setting
                   </li>
+                  </RouterLink>
+                  
                   <li
                     class="py-2 cursor-pointer transition-all duration-300 ease-in-out hover:text-sk-blue-800 border-t dark:border-ps-gray-500"
                   >
