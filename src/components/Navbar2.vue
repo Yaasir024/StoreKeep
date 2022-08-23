@@ -26,7 +26,6 @@ useClickOutside(storesMenu, () => {
   storeNav.value = false;
 });
 
-
 // Toggle Nav
 const helpNav = ref(false);
 const toggleHelpNav = () => {
@@ -39,6 +38,16 @@ useClickOutside(helpMenu, () => {
 });
 
 
+// Toggle Nav
+const notificationNav = ref(false);
+const toggleNotificationNav = () => {
+  notificationNav.value = !notificationNav.value;
+};
+
+const notificationMenu = ref(null);
+useClickOutside(notificationMenu, () => {
+  notificationNav.value = false;
+});
 </script>
 
 <template>
@@ -130,7 +139,10 @@ useClickOutside(helpMenu, () => {
         </transition>
       </div>
       <div class="relative" ref="helpMenu">
-        <div class="flex items-center p-3 pr-2 cursor-pointer" @click="toggleHelpNav">
+        <div
+          class="flex items-center p-3 pr-2 cursor-pointer"
+          @click="toggleHelpNav"
+        >
           <span>Help</span>
           <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
             <path
@@ -179,11 +191,13 @@ useClickOutside(helpMenu, () => {
                   </div>
                   <p class="mt-3 mb-2">Help Topics</p>
                   <div class="overflow-x-hidden overflow-y-auto max-h-[245px]">
-                    <ul class="text-base ">
-                      <li v-for="i in (10)" :key="i">
+                    <ul class="text-base">
+                      <li v-for="i in 10" :key="i">
                         <RouterLink to="/">
-                          <div class="py-2 flex items-center justify-between transition-all duration-300 ease-in-out hover:text-sk-blue-800">
-                            <p class="">Return of Kazama Jun {{i}}</p>
+                          <div
+                            class="py-2 flex items-center justify-between transition-all duration-300 ease-in-out hover:text-sk-blue-800"
+                          >
+                            <p class="">Return of Kazama Jun {{ i }}</p>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 256 512"
@@ -218,12 +232,29 @@ useClickOutside(helpMenu, () => {
           ></path>
         </svg>
       </div>
-      <div class="px-2">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
-          <path
-            d="M11.5,4 C12.3284271,4 13,4.67157288 13,5.5 L13,6.208 L13.1928659,6.26644975 C15.4021227,6.9794161 17,9.05310592 17,11.5 L17,14.381966 C17,15.0636597 17.5141144,15.4674835 17.7236068,15.5527864 C18.6312256,16.0112457 19,16.8789673 19,17.618034 L19,18 C18.999914,18.5522512 18.5522511,18.9999525 18,19.000086 L13.9499027,19.0004345 L13.9499027,19.0004345 C13.7180997,20.1413382 12.7093254,21 11.5,21 C10.2906746,21 9.28190033,20.1413382 9.05009729,19.0004345 L5,19.000086 C4.44774885,18.9999525 4.00008604,18.5522512 4,18 L4,17.618034 L4,17.618034 C4,16.8017489 4.4304466,16.0508527 5.12384427,15.6363588 C5.70794809,15.3546774 6,14.9365465 6,14.381966 L6,11.5 C6,8.98221115 7.69181046,6.85956581 10.0006454,6.20685 L10,5.5 C10,4.67157288 10.6715729,4 11.5,4 Z M12.9143985,19.000703 L10.0856015,19.000703 C10.2917181,19.5829319 10.8471533,20 11.5,20 C12.1528467,20 12.7082819,19.5829319 12.9143985,19.000703 Z M11.5,5 C11.2238576,5 11,5.22385763 11,5.5 L11.000297,7.02743156 C8.7501788,7.27601865 7,9.18362124 7,11.5 L7,14.381966 C7,15.1982511 6.5695534,15.9491473 5.87615573,16.3636412 L5.7609788,16.4232259 C5.47658468,16.5798721 5,16.9239115 5,17.618034 L5,18 L18,18 L18,17.618034 C18,16.9215546 17.5177307,16.5793152 17.2763932,16.4472136 C16.5953522,16.1302643 16,15.3188477 16,14.381966 L16,11.5 C16,9.18396594 14.2503421,7.2765864 12.0007074,7.02754265 L12,5.5 C12,5.22385763 11.7761424,5 11.5,5 Z"
-          ></path>
-        </svg>
+      <div class="relative" ref="notificationMenu">
+        <div class="px-2 transition-all duration-300 ease-in-out hover:text-sk-blue-800" @click="toggleNotificationNav">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+            <path
+              d="M11.5,4 C12.3284271,4 13,4.67157288 13,5.5 L13,6.208 L13.1928659,6.26644975 C15.4021227,6.9794161 17,9.05310592 17,11.5 L17,14.381966 C17,15.0636597 17.5141144,15.4674835 17.7236068,15.5527864 C18.6312256,16.0112457 19,16.8789673 19,17.618034 L19,18 C18.999914,18.5522512 18.5522511,18.9999525 18,19.000086 L13.9499027,19.0004345 L13.9499027,19.0004345 C13.7180997,20.1413382 12.7093254,21 11.5,21 C10.2906746,21 9.28190033,20.1413382 9.05009729,19.0004345 L5,19.000086 C4.44774885,18.9999525 4.00008604,18.5522512 4,18 L4,17.618034 L4,17.618034 C4,16.8017489 4.4304466,16.0508527 5.12384427,15.6363588 C5.70794809,15.3546774 6,14.9365465 6,14.381966 L6,11.5 C6,8.98221115 7.69181046,6.85956581 10.0006454,6.20685 L10,5.5 C10,4.67157288 10.6715729,4 11.5,4 Z M12.9143985,19.000703 L10.0856015,19.000703 C10.2917181,19.5829319 10.8471533,20 11.5,20 C12.1528467,20 12.7082819,19.5829319 12.9143985,19.000703 Z M11.5,5 C11.2238576,5 11,5.22385763 11,5.5 L11.000297,7.02743156 C8.7501788,7.27601865 7,9.18362124 7,11.5 L7,14.381966 C7,15.1982511 6.5695534,15.9491473 5.87615573,16.3636412 L5.7609788,16.4232259 C5.47658468,16.5798721 5,16.9239115 5,17.618034 L5,18 L18,18 L18,17.618034 C18,16.9215546 17.5177307,16.5793152 17.2763932,16.4472136 C16.5953522,16.1302643 16,15.3188477 16,14.381966 L16,11.5 C16,9.18396594 14.2503421,7.2765864 12.0007074,7.02754265 L12,5.5 C12,5.22385763 11.7761424,5 11.5,5 Z"
+            ></path>
+          </svg>
+        </div>
+        <transition name="navPopup">
+          <div class="absolute top-[200%] right-[-120px] z-50" v-if="notificationNav">
+            <div
+              class="relative w-[300px] bg-sk-white dark:bg-ps-gray-800 shadow-2xl rounded-xl"
+            >
+              <div class="w-full pb-5">
+                <div
+                  class="px-6 py-5 mb-2 border-b dark:border-ps-gray-500"
+                >
+                  <div class="">Notifications</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </transition>
       </div>
       <span class="h-5 w-[1px] mx-3 bg-sk-gray-100"></span>
       <div class="relative" ref="accountsMenu">
@@ -304,7 +335,6 @@ useClickOutside(helpMenu, () => {
     </div>
   </nav>
 </template>
-
 
 <style scoped>
 /* Modal Animation */
