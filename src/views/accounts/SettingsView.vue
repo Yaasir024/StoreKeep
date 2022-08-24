@@ -11,7 +11,7 @@ const system = useSystemStore();
 <template>
 <section class="bg-white text-sk-text-dark text-lg min-h-screen dark:bg-ps-gray-700 dark:text-sk-white">
     <Navbar2 />
-    AAAAAA
+    <div class="bg-red-700">Amamiya Jn</div>
 </section>
     
 </template>
