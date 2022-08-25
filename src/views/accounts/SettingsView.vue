@@ -10,7 +10,7 @@ const system = useSystemStore();
 
 <template>
   <section
-    class="bg-white text-sk-text-dark text-lg min-h-screen dark:bg-ps-gray-700 dark:text-sk-white h-full"
+    class="bg-white text-sk-text-dark text-lg dark:bg-ps-gray-700 dark:text-sk-white h-screen overflow-hidden"
   >
     <Navbar2 />
     <div class="h-full overflow-hidden">
