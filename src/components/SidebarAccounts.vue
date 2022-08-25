@@ -41,22 +41,7 @@
             <li
               class="py-2 cursor-pointer transition-all duration-300 ease-in-out hover:text-sk-blue-800"
             >
-              Create New Store
-            </li>
-            <li
-              class="py-2 cursor-pointer transition-all duration-300 ease-in-out hover:text-sk-blue-800"
-            >
-              Help Center
-            </li>
-            <li
-              class="py-2 cursor-pointer transition-all duration-300 ease-in-out hover:text-sk-blue-800"
-            >
               Themes
-            </li>
-            <li
-              class="py-2 cursor-pointer transition-all duration-300 ease-in-out hover:text-sk-blue-800 border-t dark:border-ps-gray-500"
-            >
-              Logout
             </li>
           </ul>
         </div>
