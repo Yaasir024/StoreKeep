@@ -16,7 +16,7 @@ const system = useSystemStore();
     <div class="h-full overflow-hidden">
       <div class="h-full flex">
         <Sidebar />
-        <div class="bg-red-700 h-full w-full">Amamiya Jn</div>
+        <div class=" h-full w-full">Amamiya Jn</div>
       </div>
     </div>
   </section>
